@@ -8,7 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.i044114.taller2.Models.Country;
+import com.i044114.taller2.Models.CountryNew;
 import com.i044114.taller2.R;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,43 +20,47 @@ import java.util.List;
  * Created by ACER on 26/09/2017.
  */
 
-public class AdapterCountrySecond extends RecyclerView.Adapter<AdapterCountry.ViewHolder> {
-    List<Country> countryList = new ArrayList<>();
+public class AdapterCountrySecond extends RecyclerView.Adapter<AdapterCountrySecond.ViewHolder> {
+    List<CountryNew> countryNewList = new ArrayList<>();
     Context context;
     // Constructor de la clase
-    public AdapterCountrySecond(List<Country> countryList, Context context) {
-        this.countryList = countryList;
+    public AdapterCountrySecond(List<CountryNew> countryNewList, Context context) {
+        this.countryNewList = countryNewList;
         this.context = context;
     }
-    @Override
-    public AdapterCountrySecond.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 // Configuracion del ViewAdapter
-// Obtener la vista (item.xml)
         View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.segundoitem, parent, false);
-// Pasar la vista (item.xml) al ViewHolder
-        AdapterCountrySecond.ViewHolder viewHolder = new AdapterCountrySecond.ViewHolder(item);
+
+        ViewHolder viewHolder = new ViewHolder(item);
         return viewHolder;
     }
     @Override
-    public void onBindViewHolder(AdapterCountry.ViewHolder holder, int position) {
-// Encargado de trabajar con el item.xml y sus componentes
-        holder.textViewName.setText(countryList.get(position).getName());
-        holder.textViewCapital.setText(countryList.get(position).getCapital());
-        holder.textViewAlphs.setText(countryList.get(position).getAlphacode());
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.textViewName.setText(countryNewList.get(position).getName());
+        holder.textViewCapital.setText(countryNewList.get(position).getCapital());
+        holder.textViewpopulation.setText(countryNewList.get(position).getPoblacion());
+        holder.textViewcode.setText(countryNewList.get(position).getCodigo());
+        holder.textViewarea.setText(countryNewList.get(position).getArea());
     }
+
     @Override
     public int getItemCount() {
-        return countryList.size();
+        return countryNewList.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView textViewName;
         TextView textViewCapital;
-        TextView textViewAlphs;
+        TextView textViewpopulation;
+        TextView textViewcode;
+        TextView textViewarea;
         public ViewHolder(View item) {
             super(item);
             textViewName = (TextView) item.findViewById(R.id.id_tv_item_namecountry);
             textViewCapital = (TextView) item.findViewById(R.id.id_tv_item_namecapital);
-            textViewAlphs = (TextView) item.findViewById(R.id.id_tv_item_nameabbreviation);
+            textViewpopulation = (TextView) item.findViewById(R.id.id_tv_item_numberpopulation);
+            textViewcode = (TextView) item.findViewById(R.id.id_tv_item_numbercode);
+            textViewarea = (TextView) item.findViewById(R.id.id_tv_item_area);
         }
     }
 

@@ -7,9 +7,9 @@ package com.i044114.taller2.Models;
 public class CountryNew {
     private String name;
     private String capital;
-    private int poblacion;
-    private int codigo;
-    private int area;
+    private String poblacion;
+    private String codigo;
+    private String area;
 
     public String getName() {
         return name;
@@ -27,27 +27,27 @@ public class CountryNew {
         this.capital = capital;
     }
 
-    public int getPoblacion() {
+    public String getPoblacion() {
         return poblacion;
     }
 
-    public void setPoblacion(int poblacion) {
+    public void setPoblacion(String poblacion) {
         this.poblacion = poblacion;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
-    public int getArea() {
+    public String getArea() {
         return area;
     }
 
-    public void setArea(int area) {
+    public void setArea(String area) {
         this.area = area;
     }
 }

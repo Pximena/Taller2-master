@@ -34,22 +34,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nombre"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="@android:color/white"/>
                 <TextView
                     android:id="@+id/id_tv_item_namecountry"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="12sp"
                     android:textColor="@android:color/white"
-                    android:layout_marginLeft="10dp"/>
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -58,22 +59,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_toRightOf="@id/lin_1"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Capital"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="@android:color/white"/>
                 <TextView
                     android:id="@+id/id_tv_item_namecapital"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="12sp"
                     android:textColor="@android:color/white"
-                    android:layout_marginLeft="10dp"/>
+                    />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -97,13 +98,13 @@
                 android:layout_height="wrap_content"
                 android:text="Habitantes"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textColor="@android:color/white"/>
             <TextView
                 android:id="@+id/id_tv_item_numberpopulation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:layout_marginLeft="10dp"/>
          </LinearLayout>
@@ -121,13 +122,13 @@
                 android:layout_height="wrap_content"
                 android:text="Codigo"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textColor="@android:color/white"/>
             <TextView
                 android:id="@+id/id_tv_item_numbercode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:layout_marginLeft="10dp"
                 />
@@ -150,13 +151,13 @@
                     android:layout_height="wrap_content"
                     android:text="Area"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="@android:color/white"/>
                 <TextView
                     android:id="@+id/id_tv_item_area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="12sp"
                     android:textColor="@android:color/white"
                     android:layout_marginLeft="10dp"/>
             </LinearLayout>

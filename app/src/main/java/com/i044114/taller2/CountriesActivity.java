@@ -14,9 +14,14 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.i044114.taller2.Adapters.AdapterCountry;
+import com.i044114.taller2.Adapters.AdapterCountrySecond;
 import com.i044114.taller2.Connection.HttpManager;
+
 import com.i044114.taller2.Models.Country;
+import com.i044114.taller2.Models.CountryNew;
+
 import com.i044114.taller2.Parser.JsonCountry;
+import com.i044114.taller2.Parser.JsonCountrySecond;
 
 import org.json.JSONException;
 
@@ -29,8 +34,8 @@ public class CountriesActivity extends AppCompatActivity {
     ProgressBar progressBar;
     Button button;
     RecyclerView recyclerView;
-    List<Country> countryList;
-    AdapterCountry adapterCountry;
+    List<CountryNew> countryNewList;
+    AdapterCountrySecond adapterCountrySecond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +77,7 @@ public class CountriesActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             try {
-                countryList = JsonCountry.getData(s);
+                countryNewList = JsonCountrySecond.getData(s);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -82,8 +87,8 @@ public class CountriesActivity extends AppCompatActivity {
     }
 
     public void processData(){
-        adapterCountry = new AdapterCountry(countryList, getApplicationContext());
-        recyclerView.setAdapter(adapterCountry);
+        adapterCountrySecond = new AdapterCountrySecond(countryNewList, getApplicationContext());
+        recyclerView.setAdapter(adapterCountrySecond);
     }
 
     // Metodo para validar la conexion a internet
