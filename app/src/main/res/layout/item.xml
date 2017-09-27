@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:padding="10dp"
-    android:background="@color/colorFondo">
+    android:background="@android:color/holo_blue_light">
     <ImageView
         android:layout_width="90dp"
         android:layout_height="90dp"
